@@ -284,22 +284,21 @@ int main()
 
     printf("initial weight : %f \n initial bias : %f \n", weight, bias);
 
-    // printf("predicted values before training\n");
-    // for (size_t i = 0; i < train_count; i++)
-    // {
-    //     x=train_data[i][0]*weight+bias;
-    //     printf("input : %f , actual output : %f , predicted output : %f difference : %f cost function : %f\n",train_data[i][0],train_data[i][1],x,fabs(x-train_data[i][1]),
-    //     cost(weight,bias)
-    // );
-
-    // }
-    float dw, db, predicted, error, training_epochs;
+    printf("predicted values before training\n");
+    for (size_t i = 0; i < train_count; i += 10)
+    {
+        x = train_data[i][0] * weight + bias;
+        printf("input : %f , actual output : %f , predicted output : %f difference : %f\n", train_data[i][0], train_data[i][1], x, fabs(x - train_data[i][1]),
+               cost(weight, bias));
+    }
+    float dw, db, predicted, error;
     float learnig_rate, bias_rate;
     learnig_rate = 1e-5f;
     bias_rate = 1e-4f;
     double dwd, dbd;
+    long int training_epochs;
     training_epochs = 1000000000;
-    for (size_t i = 0; i < 10000; i++)
+    for (size_t i = 0; i < training_epochs; i++)
     {
         dwd = 0.0;
         dbd = 0.0;
@@ -327,14 +326,21 @@ int main()
     printf("weight : %f bias : %f , cost function : %f\n", weight, bias, cost(weight, bias));
 
     end_time = clock();
+    printf("predicted values after training\n");
+    for (size_t i = 0; i < train_count; i += 10)
+    {
+        x = train_data[i][0] * weight + bias;
+        printf("input : %f , actual output : %f , predicted output : %f difference : %f\n", train_data[i][0], train_data[i][1], x, fabs(x - train_data[i][1]),
+               cost(weight, bias));
+    }
     cpu_time_used = ((float)(end_time - start_time)) / CLOCKS_PER_SEC;
     printf("Cpu time consumed : %f\n", cpu_time_used);
-    printf("cycles ran : %f\n", training_epochs);
+    printf("cycles ran : %ld\n", training_epochs);
 
     printf("MSE  : %f\n", cost(weight, bias));
     printf("MAE  : %f\n", mae(weight, bias));
     printf("R^2  : %f\n", r2_score(weight, bias));
-    printf("Calculated accuracy : %5f",r2_score(weight, bias)*100);
+    printf("Calculated accuracy : %5f", r2_score(weight, bias) * 100);
 
     return 0;
 }
