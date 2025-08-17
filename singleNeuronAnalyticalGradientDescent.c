@@ -282,7 +282,9 @@ int main()
     weight = 1.0f + rand_float() * 9;
     bias = 1.0f + rand_float() * 9;
 
-    printf("initial weight : %f \n initial bias : %f \n", weight, bias);
+    printf("\n\nBEFORE TRAINING\n\n");
+
+    printf("initial weight : %f \ninitial bias : %f\ninitial cost function : %f\n", weight, bias,cost(weight,bias));
 
     printf("predicted values before training\n");
     for (size_t i = 0; i < train_count; i += 10)
@@ -298,7 +300,9 @@ int main()
     double dwd, dbd;
     long int training_epochs;
     training_epochs = 1000000000;
-    for (size_t i = 0; i < training_epochs; i++)
+
+    printf("\n\nSTARTING TRAINING\n\n");
+    for (size_t i = 0; i < 10000; i++)
     {
         dwd = 0.0;
         dbd = 0.0;
@@ -334,7 +338,9 @@ int main()
                cost(weight, bias));
     }
     cpu_time_used = ((float)(end_time - start_time)) / CLOCKS_PER_SEC;
-    printf("Cpu time consumed : %f\n", cpu_time_used);
+    int minutes = (int)(cpu_time_used / 60);
+    float seconds = cpu_time_used - (minutes * 60);
+    printf("\nCpu time consumed : %d minutes %.2f seconds\n", minutes, seconds);
     printf("cycles ran : %ld\n", training_epochs);
 
     printf("MSE  : %f\n", cost(weight, bias));
