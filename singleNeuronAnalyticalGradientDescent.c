@@ -350,3 +350,86 @@ int main()
 
     return 0;
 }
+
+
+/*
+
+DATA AFTER TRAINING
+
+
+
+BEFORE TRAINING
+
+initial weight : 8.186102 
+initial bias : 4.224036
+initial cost function : 534.354187
+predicted values before training
+input : -100.000000 , actual output : -491.000000 , predicted output : -814.386108 difference : 323.386108
+input : -90.000000 , actual output : -441.000000 , predicted output : -732.525085 difference : 291.525085
+input : -80.000000 , actual output : -391.000000 , predicted output : -650.664124 difference : 259.664124
+input : -70.000000 , actual output : -341.000000 , predicted output : -568.803101 difference : 227.803101
+input : -60.000000 , actual output : -291.000000 , predicted output : -486.942078 difference : 195.942078
+input : -50.000000 , actual output : -241.000000 , predicted output : -405.081055 difference : 164.081055
+input : -40.000000 , actual output : -191.000000 , predicted output : -323.220062 difference : 132.220062
+input : -30.000000 , actual output : -141.000000 , predicted output : -241.359024 difference : 100.359024
+input : -20.000000 , actual output : -91.000000 , predicted output : -159.498016 difference : 68.498016
+input : -10.000000 , actual output : -41.000000 , predicted output : -77.636986 difference : 36.636986
+input : 0.000000 , actual output : 9.000000 , predicted output : 4.224036 difference : 4.775964
+input : 10.000000 , actual output : 59.000000 , predicted output : 86.085060 difference : 27.085060
+input : 20.000000 , actual output : 109.000000 , predicted output : 167.946075 difference : 58.946075
+input : 30.000000 , actual output : 159.000000 , predicted output : 249.807083 difference : 90.807083
+input : 40.000000 , actual output : 209.000000 , predicted output : 331.668121 difference : 122.668121
+input : 50.000000 , actual output : 259.000000 , predicted output : 413.529114 difference : 154.529114
+input : 60.000000 , actual output : 309.000000 , predicted output : 495.390137 difference : 186.390137
+input : 70.000000 , actual output : 359.000000 , predicted output : 577.251221 difference : 218.251221
+input : 80.000000 , actual output : 409.000000 , predicted output : 659.112244 difference : 250.112244
+input : 90.000000 , actual output : 459.000000 , predicted output : 740.973206 difference : 281.973206
+input : 100.000000 , actual output : 509.000000 , predicted output : 822.834229 difference : 313.834229
+
+
+STARTING TRAINING
+
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+Calculated Weight : 5.000027 Bias : 8.847483 , cost function : -0.000034 
+
+After training
+weight : 5.000226 bias : 8.847413 , cost function : 0.000366
+predicted values after training
+input : -100.000000 , actual output : -491.000000 , predicted output : -491.175232 difference : 0.175232
+input : -90.000000 , actual output : -441.000000 , predicted output : -441.172974 difference : 0.172974
+input : -80.000000 , actual output : -391.000000 , predicted output : -391.170715 difference : 0.170715
+input : -70.000000 , actual output : -341.000000 , predicted output : -341.168457 difference : 0.168457
+input : -60.000000 , actual output : -291.000000 , predicted output : -291.166168 difference : 0.166168
+input : -50.000000 , actual output : -241.000000 , predicted output : -241.163910 difference : 0.163910
+input : -40.000000 , actual output : -191.000000 , predicted output : -191.161652 difference : 0.161652
+input : -30.000000 , actual output : -141.000000 , predicted output : -141.159378 difference : 0.159378
+input : -20.000000 , actual output : -91.000000 , predicted output : -91.157120 difference : 0.157120
+input : -10.000000 , actual output : -41.000000 , predicted output : -41.154854 difference : 0.154854
+input : 0.000000 , actual output : 9.000000 , predicted output : 8.847413 difference : 0.152587
+input : 10.000000 , actual output : 59.000000 , predicted output : 58.849678 difference : 0.150322
+input : 20.000000 , actual output : 109.000000 , predicted output : 108.851944 difference : 0.148056
+input : 30.000000 , actual output : 159.000000 , predicted output : 158.854202 difference : 0.145798
+input : 40.000000 , actual output : 209.000000 , predicted output : 208.856476 difference : 0.143524
+input : 50.000000 , actual output : 259.000000 , predicted output : 258.858734 difference : 0.141266
+input : 60.000000 , actual output : 309.000000 , predicted output : 308.860992 difference : 0.139008
+input : 70.000000 , actual output : 359.000000 , predicted output : 358.863281 difference : 0.136719
+input : 80.000000 , actual output : 409.000000 , predicted output : 408.865540 difference : 0.134460
+input : 90.000000 , actual output : 459.000000 , predicted output : 458.867798 difference : 0.132202
+input : 100.000000 , actual output : 509.000000 , predicted output : 508.870056 difference : 0.129944
+
+Cpu time consumed : 11 minutes 5.06 seconds
+cycles ran : 1000000000
+MSE  : 0.000366
+MAE  : 0.002384
+R^2  : 1.000000
+Calculated accuracy : 99.999969
+
+*/
