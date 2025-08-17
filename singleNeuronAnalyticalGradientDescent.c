@@ -302,7 +302,7 @@ int main()
     training_epochs = 1000000000;
 
     printf("\n\nSTARTING TRAINING\n\n");
-    for (size_t i = 0; i < 10000; i++)
+    for (size_t i = 0; i < training_epochs; i++)
     {
         dwd = 0.0;
         dbd = 0.0;
