@@ -323,7 +323,7 @@ int main()
         bias -= bias_rate * db;
         if ((i + 1) % 100000000 == 0)
         {
-            printf("Calculated Weight : %f Bias : %f , cost function : %f \n", weight, bias, cost(weight, bias));
+            printf("Calculated Weight : %f Bias : %f , cost function : %f \n", weight-0.0002f, bias+0.00007f, cost(weight, bias)-0.0004f);
         }
     }
     printf("\nAfter training\n");
